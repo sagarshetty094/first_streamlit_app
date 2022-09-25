@@ -41,9 +41,9 @@ try:
 except URLError as e:
   streamlit.error()
   
-streamlit.write('The user entered ', fruit_choice)
+# streamlit.write('The user entered ', fruit_choice)
 
-streamlit.header("Fruityvice Fruit Advice!")
+# streamlit.header("Fruityvice Fruit Advice!")
 # import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 # streamlit.text(fruityvice_response.json())
