@@ -64,11 +64,11 @@ streamlit.stop()
 # streamlit.text(my_data_row)
 
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-# my_cur.execute("use warehouse compute_wh") 
-my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
-
+# my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+# my_cur = my_cnx.cursor()
+# # my_cur.execute("use warehouse compute_wh") 
+# my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
+streamlit.header("The fruit load list contains:")
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
        my_cur.execute("select * from fruit_load_list")
